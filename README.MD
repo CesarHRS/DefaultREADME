@@ -10,11 +10,10 @@
   <a href="https://img.shields.io/github/forks/ralvescosta/readme-template.svg">
     <img src="https://img.shields.io/github/forks/ralvescosta/readme-template.svg" alt="Forks">
   </a>
-  <a href="https://img.shields.io/github/actions/workflow/status/:ralvescosta/:readme-template/:ci">
-    <img src="https://img.shields.io/github/actions/workflow/status/:ralvescosta/:readme-template/:ci" alt="CI Action">
+  <a href="https://github.com/ralvescosta/readme-template/actions/workflows/ci.yaml/badge.svg">
+    <img src="https://github.com/ralvescosta/readme-template/actions/workflows/ci.yaml/badge.svg" alt="CI Action">
   </a>
 </p>
-
 
 Here you should put a small summary of what is in this repo, why it is important, and explain a little on how the
 problem was solved.
