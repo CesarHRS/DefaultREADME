@@ -1,0 +1,17 @@
+name: ci
+
+on:
+  push:
+    branches: 
+      - develop
+      - main
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  cache-modules:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 📁 Checkout repository
+      uses: actions/checkout@v2

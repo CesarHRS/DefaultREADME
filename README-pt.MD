@@ -1,4 +1,19 @@
-# Nome do Repositório
+<h1 align="center">Repository Name or Shortcut or Alias</h1>
+
+<p align="center">
+  <a href="https://img.shields.io/github/issues/ralvescosta/readme-template.svg">
+    <img src="https://img.shields.io/github/issues/ralvescosta/readme-template.svg" alt="Issues">
+  </a>
+  <a href="https://img.shields.io/github/stars/ralvescosta/readme-template.svg">
+    <img src="https://img.shields.io/github/stars/ralvescosta/readme-template.svg" alt="Starts">
+  </a>
+  <a href="https://img.shields.io/github/forks/ralvescosta/readme-template.svg">
+    <img src="https://img.shields.io/github/forks/ralvescosta/readme-template.svg" alt="Forks">
+  </a>
+  <a href="https://github.com/ralvescosta/readme-template/actions/workflows/ci.yaml/badge.svg">
+    <img src="https://github.com/ralvescosta/readme-template/actions/workflows/ci.yaml/badge.svg" alt="CI Action">
+  </a>
+</p>
 
 Aqui você deve colocar um pequeno resumo do que está neste repositório, por que é importante e explicar um pouco sobre como o problema foi resolvido.
 
