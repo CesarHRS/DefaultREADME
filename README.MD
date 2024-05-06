@@ -1,4 +1,16 @@
-# Repository Name
+<h1 align="center">Repository Name or Shortcut or Alias</h1>
+
+<p align="center">
+  <a href="https://img.shields.io/github/issues/ralvescosta/readme-template.svg">
+    <img src="https://img.shields.io/github/issues/ralvescosta/readme-template.svg" alt="Issues">
+  </a>
+  <a href="https://img.shields.io/github/stars/ralvescosta/readme-template.svg">
+    <img src="https://img.shields.io/github/stars/ralvescosta/readme-template.svg" alt="Starts">
+  </a>
+  <a href="https://img.shields.io/github/forks/ralvescosta/readme-template.svg">
+    <img src="https://img.shields.io/github/forks/ralvescosta/readme-template.svg" alt="Forks">
+  </a>
+</p>
 
 Here you should put a small summary of what is in this repo, why it is important, and explain a little on how the
 problem was solved.
