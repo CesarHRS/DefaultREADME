@@ -26,15 +26,20 @@ Inglês | [Português](README-pt.md)
 - [Nome do Repositório](#nome-do-repositório)
 - [Índice](#índice)
 - [Pré-instalação](#pré-instalação)
-  - [Linux (Debian)](#linux-debian)
-  - [Linux (Arch)](#linux-arch)
-  - [Windows (Chocolatey)](#windows-chocolatey)
-  - [Windows (Instalador)](#windows-instalador)
+    - [Linux (Debian)](#linux-debian)
+    - [Linux (Arch)](#linux-arch)
+    - [Windows (Chocolatey)](#windows-chocolatey)
+    - [Windows (Instalador)](#windows-instalador)
 - [Instalação](#instalação)
+    - [Clonando o repositório](#clonando-o-repositório)
+    - [Criando um diretório de compilação](#criando-um-diretório-de-compilação)
+    - [Compilando o programa](#compilando-o-programa)
 - [Como usar o programa](#como-usar-o-programa)
-  - [Iniciar Interface Ethernet](#iniciar-interface-ethernet)
-    - [Solicitação](#solicitação)
-    - [Resposta](#resposta)
+    - [Firewall](#firewall)
+- [Prmeiros passos](#primeiros-passos)
+    - [Saida do terminal](#saida-do-terminal)
+- [Referências](#referencias)
+
 
 # Pré-instalação
 
@@ -84,14 +89,14 @@ Exemplo:
 
 1. Instale o python usando o instalador:
 
-   Para instalar o python, você precisará executar o instalador localizado no [site oficial do python](https://www.python.org/downloads/)
+   Para instalar o python, você precisará executar o instalador localizado no
+   [site oficial do python](https://www.python.org/downloads/)
 
 </details><p>
 
 # Instalação
 
-Nesta seção, você deve começar com a instalação do próprio projeto. Para manter o repositório bem organizado, você também pode criar várias subseções quebrando o processo de instalação em partes menores para ajudar na
-melhor compreensão do processo.
+Nesta seção, você deve começar com a instalação do próprio projeto. Para manter o repositório bem organizado, você também pode criar várias subseções quebrando o processo de instalação em partes menores para ajudar na melhor compreensão do processo.
 
 Se alguma parte da instalação for considerada complexa, adicionar imagens e GIFs também pode ajudar, especialmente quando for necessário encontrar um botão em uma interface ou clicar em várias configurações em um menu seguindo uma ordem específica.
 
@@ -103,7 +108,7 @@ Exemplo:
 
 Na imagem acima, você pode entender facilmente quais passos deve seguir e em que ordem, mas é uma boa prática explicar o conteúdo na imagem para garantir que seja entendido corretamente.
 
-Dar preferência para imagens que estejam hospedadas na internet, para não poluir o repositório com arquivos de imagens. Mas caso seja necessário, adicionar uma pasta "images", inserir as imagens nesse repostitório com o nome no seguinte formato: "1_nome_da_imagem.png", e referenciá-la no readme de forma relativa: 
+> **AVISO:** Dê preferência para imagens que estejam hospedadas na internet, para não poluir o repositório com arquivos de imagens. Mas caso seja necessário, adicionar uma pasta "images", inserir as imagens nesse repostitório com o nome no seguinte formato: "1_nome_da_imagem.png", e referenciá-la no readme de forma relativa:
 
 ```markdown
 ![import_file](images/1_nome_da_imagem.png)
@@ -120,9 +125,14 @@ git clone (URL do repositório)
 
 </details><p>
 
-<details><summary><b>Preparação para a compilação</b></summary>
 
-Pode ser necessário realizar alguns comandos antes da compilação do repositório, ou mesmo algum ajuste nas configurações do projeto. Em repositórios que usam node.js por exemplo, pode ser necessário o comando `npm install` ou `yarn install`. Em projetos que usam cmake pode ser necessário criar o diretório de build antes da compilação conforme exemplo abaixo. Assim nessa seção devem ser descritos esses procedimentos. Abaixo temos um exemplo demonstrando como preparar o ambiente para realizar a compilação de uma aplicação feita em ANSI C com cmake:
+<details><summary><b>Criando um diretório de compilação</b></summary>
+
+Abaixo temos um exemplo demonstrando como preparar o ambiente para realizar a compilação de uma aplicação feita em ANSI C com cmake:
+
+> **AVISO:** Caso o repositório utilize o node.js, pode ser necessário utilizar o comando ``npm install``
+> ou ``yarn install``, para estes casos, modifique esta subseção de acordo
+
 
 Agora, antes de executar o CMAKE, é necessário criar uma pasta chamada build e depois mudar para essa pasta. Isso pode ser feito usando o seguinte comando:
 
@@ -140,26 +150,25 @@ cmake ..
 
 Em algumas partes da instalação, onde erros comuns podem ocorrer, é recomendável usar um aviso explicando como as coisas podem dar errado e erros comuns que podem ser cometidos. Exemplo:
 
-> **Aviso:** Tenha cuidado para não executar o MAKEFILE como superusuário, isso pode danificar seu sistema operacional.
+> **AVISO:** Tenha cuidado para não executar o MAKEFILE como superusuário, isso pode danificar seu sistema operacional.
 
 Outra recomendação é colocar uma tabela simples de compilação com os parâmetros que você pode usar para compilar o programa, por exemplo:
 
-| Comando    | Função                                                                      |
-|------------|-------------------------------------------------------------------------------|
-| make clean | Exclui os arquivos criados pela última compilação na pasta build          |
+| Comando    | Função                                                                   |
+|------------|--------------------------------------------------------------------------|
+| make clean | Exclui os arquivos criados pela última compilação na pasta build         |
 | make       | Compila o programa com o compilador g++, o resultado está na pasta build |
-| make run   | Compila e depois executa o programa na pasta build                    |
+| make run   | Compila e depois executa o programa na pasta build                       |
 
 </details><p>
 
 # Como usar o programa
 
-Antes da instalação (não seria após a instalação, já que essa seção está após a seção de isntalação?) , é bom ter uma seção para explicar como usar o programa da maneira como foi pretendido ser usado, então explique quais parâmetros ele pode receber, entradas comuns e suas saídas esperadas, etc. Se necessário, você também pode criar uma seção de **Configuração** para explicar melhor como configurar o programa. Dependendo do programa, é possível criar outra seção apenas para explicar quais são os formatos de pacote usados e exemplos de mensagens com eles sendo enviados.
+Após a instalação, é bom ter uma seção para explicar como usar o programa da maneira como foi pretendido ser usado, então explique quais parâmetros ele pode receber, entradas comuns e suas saídas esperadas, etc. Se necessário, você também pode criar uma seção de **Configuração** para explicar melhor como configurar o programa. Dependendo do programa, é possível criar outra seção apenas para explicar quais são os formatos de pacote usados e exemplos de mensagens com eles sendo enviados.
 
 Exemplo:
 
 <details><summary><b>Firewall</b></summary>
-
 
 1. Firewall
 
@@ -181,9 +190,11 @@ Exemplo:
 
 </details><p>
 
-Adicionar ao final do readme, um exemplo de saída do console da aplicação após a compilação. Dessa forma, é possível ter uma referencia básica de como o programa deve se comportar durante as etapas inicias da sua execução. Grande parte dos problemas acontece nessa etapa, então isso pode ser útil para que seja possível identificar se algo deu errado. Abaixo segue um exemplo de saída da aplicação v3.4.0 do firmware do esp32 rodando em um HG3 V1:
+# Primeiros passos
 
-<details><summary><b>Saída do console</b></summary>
+O objetivo dessa seção é ir do fim da etapa de compilação para os primeiros passos da execução do programa, nela, será mostrado como o programa deve se comportar já que grande parte dos problemas acontecem nessa etapa e pode ser possível identificar se algo deu errado. Abaixo segue um exemplo de saída da aplicação v3.4.0 do firmware de esp32 rodando em um HG3 V1:
+
+<details><summary><b>Saída do terminal</b></summary>
 
 ```plain-text
 rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
@@ -195,7 +206,6 @@ load:0x40078000,len:15548
 ho 0 tail 12 room 4
 load:0x40080400,len:4
 0x40080400: _init at ??:?
-
 load:0x40080404,len:3404
 entry 0x40080614
 I (586) cpu_start: Multicore app
@@ -252,7 +262,6 @@ I (00:00:01.247) wifi_init: tcp mss: 1440
 I (00:00:01.252) wifi_init: WiFi IRAM OP enabled
 I (00:00:01.257) wifi_init: WiFi RX IRAM OP enabled
 I (1887) wifi:Set ps type: 0, coexist: 0
-
 I (00:00:01.268) uart: queue free spaces: 20
 I (00:00:01.273) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
 I (00:00:01.282) uart: queue free spaces: 20
@@ -282,121 +291,6 @@ I (00:00:13.867) hg_app: HG_APP_MSG_ID_RESET_TASK_WDT
 
 </details><p>
 
-<details><summary><b>Formato da mensagem de saúde</b></summary>
+# Referências
 
-A cada dez segundos, o gateway envia uma mensagem de saúde para o broker. Através dessa mensagem, é possível monitorar certos aspectos da operação do dispositivo.
-
-```c
-{
-  "t": time_t,                        ///< Carimbo de hora da mensagem
-  "rssi": int8_t,                     ///< rssi WiFi
-  "ssid": string,                     ///< ssid WiFi
-  "ip": string,                       ///< IP do dispositivo
-  "bsc": hdr_bsc_err_t,               ///< Código de erro do Scanner Ble
-  "performance": float,               ///< Performance do dispositivo (Taxa de Pacotes Recebidos/Perdidos)
-  "boot": uint16_t,                   ///< Contagem de inicialização após a última ligação
-  "reason": esp_reset_reason_t,       ///< Último motivo de reinicialização
-  "memory": uint16_t,                 ///< Heap de memória livre
-  "lifetime": uint64_t                ///< Tempo de vida após a última ligação em minutos
-}
-```
-
-O valor da chave "bsc" pode representar os seguintes erros:
-
-```c
-typedef enum hdr_bsc_err
-{
-    BSC_ERROR_NOERROR = 48,           ///< Sem erro
-    BSC_ERROR_UNEXPECTED_CMD = 49,    ///< Comando inesperado recebido pelo nrf
-    BSC_ERROR_UNKNOWN_CMD = 50,        ///< Comando desconhecido recebido pelo nrf
-    BSC_ERROR_RQMBUSY = 51,           ///< RQM está ocupado
-    BSC_ERROR_UARTCOMM = 52,          ///< Erro de comunicação UART
-    BSC_ERROR_UARTUFIFO = 53,         ///< Overflow de FIFO UART
-    BSC_ERROR_ADVLOST = 54,           ///< ADV está perdido
-    BSC_ERROR_UNKNOWN_SEQ = 55,        ///< Sequência de dados desconhecida recebida pelo nrf
-    BSC_ERROR_CNNT_TIMEOUT = 56,        ///< Timeout de conexão <OBSOLETO>
-    BSC_ERROR_CNNT_OVERFLOW = 57,     ///< Overflow de conexão <OBSOLETO>
-    BSC_ERROR_STARTUP = 58            ///< Erro no Início do Scanner Ble
-} hdr_bsc_err_t;
-```
-
-O valor da chave "reason" pode representar os seguintes erros:
-
-```c
-typedef enum {
-    ESP_RST_UNKNOWN,    ///< O motivo da reinicialização não pode ser determinado
-    ESP_RST_POWERON,    ///< Reinicialização devido a evento de ligação
-    ESP_RST_EXT,        ///< Reinicialização por um pino externo (não aplicável ao ESP32)
-    ESP_RST_SW,         ///< Reinicialização de software via esp_restart
-    ESP_RST_PANIC,      ///< Reinicialização de software devido a exceção/pancada
-    ESP_RST_INT_WDT,    ///< Reinicialização (software ou hardware) devido ao watchdog de interrupção
-    ESP_RST_TASK_WDT,   ///< Reinicialização devido a watchdog de tarefa
-    ESP_RST_WDT,        ///< Reinicialização devido a outros watchdogs
-    ESP_RST_DEEPSLEEP,  ///< Reinicialização após sair do modo de hibernação profunda
-    ESP_RST_BROWNOUT,   ///< Reinicialização por brownout (software ou hardware)
-    ESP_RST_SDIO,       ///< Reinicialização via SDIO
-} esp_reset_reason_t;
-```
-
-Exemplo de mensagem:
-
-```json
-{
-  "t": 1654689408,
-  "rssi": -55,
-  "ssid": "CABO CANAVERAL",
-  "ip": "192.168.1.13",
-  "bsc": 48,
-  "performance": 99.16,
-  "boot": 0,
-  "reason": 1,
-  "memory": 75272,
-  "lifetime": 30
-}
-```
-
-</details><p>
-
-Acredito que documentações de API, estrutura de dados, etc, serão realizadas em outros documentos. Esses documentos podem ser referenciados na seção final do readme.md. Dessa forma, o readme principal do repositório fica responsável apenas por instruir como clonar, compilar e executar a aplicação.
-
-Se o programa também puder se comunicar com alguma API, você também pode criar uma seção e colocar as informações nela, com exemplos de uma solicitação e resposta da API. Exemplo:
-
-<details><summary><b>API de Gateway</b></summary>
-
-É possível se comunicar com o dispositivo usando a API de Gateway que pode ser acessada por um cliente HTTP local ou um cliente MQTT conectado ao mesmo broker do dispositivo.
-
-Para usar esta API no MQTT, publique solicitações para `B2D/$companyId/$mac/$deviceId` e inscreva-se em `C2B/$companyId/$mac/$deviceId/ackGtw` para receber respostas do dispositivo.
-
-## Iniciar Interface Ethernet
-
-### Solicitação
-
-`POST /v1/hg/queue`
-
-```json
-{
-    "id": 0,
-    "timeout": 5000,
-    "disabled": false,
-    "ip": {
-        "enabled": false,
-        "ip": "",
-        "netmask": "",
-        "gw": "",
-        "dns": ""
-    }
-}
-```
-
-### Resposta
-
-`HTTP 200 OK`
-
-```json
-{
-	"err": 0,
-	"msg": "ESP_OK(0x0)"
-}
-```
-
-</details><p>
+Nesta seção serão colocados links para o repositório das APIs utilizadas, bem como uma explicação geral das estruturas de dados que são utilizadas pelo programa
