@@ -1,4 +1,4 @@
-```markdown
+
 <h1 align="center">Repository Name or Shortcut or Alias</h1>
 
 <p align="center">
@@ -180,11 +180,11 @@ Example:
         + Enable Gatekeeper?
             - Defend against malware by
 
- enforcing code signing and checking downloaded apps before allowing them to run.
-        + Prevent automatic software whitelisting?
-            - Both built-in and downloaded software will need user approval for whitelisting.
-        + Disable Captive Portal Assistant and force login via browser on untrusted networks?
-            - The Captive Portal Assistant could be triggered and redirect you to a malicious site WITHOUT any user interaction.
+enforcing code signing and checking downloaded apps before allowing them to run.
++ Prevent automatic software whitelisting?
+- Both built-in and downloaded software will need user approval for whitelisting.
++ Disable Captive Portal Assistant and force login via browser on untrusted networks?
+- The Captive Portal Assistant could be triggered and redirect you to a malicious site WITHOUT any user interaction.
 
 </details><p>
 
