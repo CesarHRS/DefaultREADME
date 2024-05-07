@@ -1,5 +1,5 @@
 
-<h1 align="center">Repository Name or Shortcut or Alias</h1>
+<h1 align="center">Repository Name</h1>
 
 <p align="center">
   <a href="https://img.shields.io/github/issues/ralvescosta/readme-template.svg">
@@ -20,7 +20,7 @@ Here you should put a brief summary of what's in this repository, why it's impor
 
 If there is a version of this readme in another language, please put the link here. Example:
 
-English | [Portuguese](README-pt.md)
+English | [Portugês](README-pt.md)
 
 # Index
 
